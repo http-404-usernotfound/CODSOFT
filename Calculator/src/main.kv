@@ -1,0 +1,125 @@
+Calculator:
+
+<Calculator>:
+	orientation: "vertical"
+	canvas.before:
+		Rectangle:
+			pos: self.pos
+			size: self.size
+			source: "CalculatorBG.png"
+
+	BoxLayout:
+		size_hint: 1, 0.17
+
+		GridLayout:
+			cols: 10
+			rows: 1
+			padding: [75, 45, 70, 5]
+
+			Image:
+				source:root.displayImageList[0]
+			Image:
+				source:root.displayImageList[1]
+			Image:
+				source:root.displayImageList[2]
+			Image:
+				source:root.displayImageList[3]
+			Image:
+				source:root.displayImageList[4]
+			Image:
+				source:root.displayImageList[5]
+			Image:
+				source:root.displayImageList[6]
+			Image:
+				source:root.displayImageList[7]
+			Image:
+				source:root.displayImageList[8]
+			Image:
+				source:root.displayImageList[9]
+
+
+	GridLayout:
+		rows: 7
+		cols: 4
+		spacing: 0
+		padding: [43, 50, 25, 50]
+		Button:
+			background_normal: 'AC.png'
+			background_down:'AC(dark).png'
+			on_press: root.allClear(self)
+		Button:
+			background_normal: 'Del.png'
+			background_down:'Del(dark).png'
+			on_press: root.delete(self)
+		Button:
+			background_normal: 'OpenB.png'
+			background_down:'OpenB(dark).png'
+			on_press: root.addChar(self, '(')
+		Button:
+			background_normal: 'CloseB.png'
+			background_down:'CloseB(dark).png'
+			on_press: root.addChar(self, ')')
+		Button:
+			background_normal: 'One.png'
+			background_down:'One(dark).png'
+			on_press: root.addChar(self, '1')
+		Button:
+			background_normal: 'Two.png'
+			background_down:'Two(dark).png'
+			on_press: root.addChar(self, '2')
+		Button:
+			background_normal: 'Three.png'
+			background_down:'Three(dark).png'
+			on_press: root.addChar(self, '3')
+		Button:
+			background_normal: 'Plus.png'
+			background_down:'Plus(dark).png'
+			on_press: root.addChar(self, '+')
+		Button:
+			background_normal: 'Four.png'
+			background_down:'Four(dark).png'
+			on_press: root.addChar(self, '4')
+		Button:
+			background_normal: 'Five.png'
+			background_down:'Five(dark).png'
+			on_press: root.addChar(self, '5')
+		Button:
+			background_normal: 'Six.png'
+			background_down:'Six(dark).png'
+			on_press: root.addChar(self, '6')
+		Button:
+			background_normal: 'Minus.png'
+			background_down:'Minus(dark).png'
+			on_press: root.addChar(self, '-')
+		Button:
+			background_normal: 'Seven.png'
+			background_down:'Seven(dark).png'
+			on_press: root.addChar(self, '7')
+		Button:
+			background_normal: 'Eight.png'
+			background_down:'Eight(dark).png'
+			on_press: root.addChar(self, '8')
+		Button:
+			background_normal: 'Nine.png'
+			background_down:'Nine(dark).png'
+			on_press: root.addChar(self, '9')
+		Button:
+			background_normal: 'Multiply.png'
+			background_down:'Multiply(dark).png'
+			on_press: root.addChar(self, '*')
+		Button:
+			background_normal: 'Dot.png'
+			background_down:'Dot(dark).png'
+			on_press: root.addChar(self, '.')
+		Button:
+			background_normal: 'Zero.png'
+			background_down:'Zero(dark).png'
+			on_press: root.addChar(self, '0')
+		Button:
+			background_normal: 'Equal.png'
+			background_down:'Equal(dark).png'
+			on_press: root.evaluate(self)
+		Button:
+			background_normal: 'Divide.png'
+			background_down:'Divide(dark).png'
+			on_press: root.addChar(self, '/')
