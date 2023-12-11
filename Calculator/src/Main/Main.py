@@ -8,15 +8,15 @@ Config.set('graphics', 'height', 650)
 Config.set('graphics', 'resizable', False)
 
 class Calculator(BoxLayout):
-    displayImageList = ListProperty(['None.png']*10)
+    displayImageList = ListProperty(['../None.png']*10)
 
     count = 0
-    noToImage = {'1':'One(only).png', '2':'Two(only).png', '3':'Three(only).png'
-                 , '4':'Four(only).png', '5':'Five(only).png', '6':'Six(only).png'
-                 , '7':'Seven(only).png', '8':'Eight(only).png', '9':'Nine(only).png'
-                 , '0':'Zero(only).png', '(':'OpenB(only).png', ')':'CloseB(only).png'
-                 , '.':'Dot(only).png', '+':'Plus(only).png', '-':'Minus(only).png'
-                 , '*':'Multiply(only).png', '/':'Divide(only).png', '':'None.png'}
+    noToImage = {'1':'../One(only).png', '2':'../Two(only).png', '3':'../Three(only).png'
+                 , '4':'../Four(only).png', '5':'../Five(only).png', '6':'../Six(only).png'
+                 , '7':'../Seven(only).png', '8':'../Eight(only).png', '9':'../Nine(only).png'
+                 , '0':'../Zero(only).png', '(':'../OpenB(only).png', ')':'../CloseB(only).png'
+                 , '.':'../Dot(only).png', '+':'../Plus(only).png', '-':'../Minus(only).png'
+                 , '*':'../Multiply(only).png', '/':'../Divide(only).png', '':'../None.png'}
     expression = ''
     def addChar(self, event,  num):
         self.expression += num
