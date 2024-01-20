@@ -1,3 +1,4 @@
-Random projects
-
-Owner: Aman Gokhale
+Install Kivy to use the apps:
+```bash
+pip install kivy
+```
